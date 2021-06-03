@@ -1,6 +1,10 @@
 import React from "react";
 import "./Post.css";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
+import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
+import NearMeIcon from "@material-ui/icons/NearMe";
+
 
 function Post(props) {
   let today = new Date();
@@ -26,6 +30,24 @@ function Post(props) {
         </div>
       </div>
       <img src={props.img} alt="" />
+      <div className="like-comment">
+        <p>10 likes</p>
+        <p>5 comments</p>
+      </div>
+      <div className="reactSection">
+        <div className="reactOption">
+          <ThumbUpAltIcon />
+          <p>Like</p>
+        </div>
+        <div className="reactOption">
+          <ChatBubbleOutlineIcon />
+          <p>Comment</p>
+        </div>
+        <div className="reactOption">
+          <NearMeIcon />
+          <p>Share</p>
+        </div>
+      </div>
     </div>
   );
 }
