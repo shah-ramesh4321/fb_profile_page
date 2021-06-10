@@ -3,8 +3,9 @@ import "./Post.css";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
-import NearMeIcon from "@material-ui/icons/NearMe";
-
+// import NearMeIcon from "@material-ui/icons/NearMe";
+import ReplyIcon from "@material-ui/icons/Reply";
+import PublicIcon from "@material-ui/icons/Public";
 
 function Post(props) {
   let today = new Date();
@@ -21,8 +22,9 @@ function Post(props) {
           />
           <div className="name-date">
             <h4>Ramesh Shah</h4>
-            <p>{date}.🌐</p>
-            {/* <LanguageIcon style={{ fontSize: 10 }} /> */}
+            <p>
+              {date}. <PublicIcon style={{ fontSize: 10 }} />
+            </p>
           </div>
         </div>
         <div className="rightPostHeading">
@@ -31,21 +33,27 @@ function Post(props) {
       </div>
       <img src={props.img} alt="" />
       <div className="like-comment">
-        <p>10 likes</p>
-        <p>5 comments</p>
+        <p>{props.like} likes</p>
+        <p>{props.comment} comments</p>
       </div>
       <div className="reactSection">
         <div className="reactOption">
-          <ThumbUpAltIcon />
-          <p>Like</p>
+          <span className="likeBtn">
+            <ThumbUpAltIcon />
+          </span>
+          <h5>Like</h5>
         </div>
         <div className="reactOption">
-          <ChatBubbleOutlineIcon />
-          <p>Comment</p>
+          <span className="commentBtn">
+            <ChatBubbleOutlineIcon />
+          </span>
+          <h5>Comment</h5>
         </div>
         <div className="reactOption">
-          <NearMeIcon />
-          <p>Share</p>
+          <span className="shareBtn">
+            <ReplyIcon />
+          </span>
+          <h5>Share</h5>
         </div>
       </div>
     </div>

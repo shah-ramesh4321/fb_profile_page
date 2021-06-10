@@ -2,9 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.05);
-  /* overflow: auto; */
-  /* width: 50%; */
 }
 
 .leftContainer {
@@ -44,14 +41,14 @@
 }
 
 .intro {
-  /* background-color: violet; */
+  background-color: white;
   padding-left: 10px;
   padding-bottom: 10px;
   border-radius: 10px;
   box-shadow: 0px 1px 3px 0px;
   border: none;
   position: absolute;
-  top: 632px;
+  top: 615px;
   width: 350px;
 }
 
@@ -70,16 +67,15 @@
   border-radius: 10px;
   box-shadow: 0px 1px 3px 0px;
   position: absolute;
-  top: 1035px;
+  top: 1012px;
   width: 350px;
+  background-color: white;
 }
 
 .photoHeading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding-bottom: 2px; */
-  /* padding-bottom: 3px; */
 }
 
 .photoHeading > p {
@@ -89,8 +85,8 @@
 }
 
 .imgCollection > img {
-  width: 100px;
-  height: 100px;
+  width: 102px;
+  height: 102px;
   margin: 2px;
   cursor: pointer;
 }
@@ -101,9 +97,41 @@
   margin: 15px;
 }
 
+.friendContainer {
+  margin: 10px 0;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px 0px;
+  position: absolute;
+  top: 1415px;
+  width: 350px;
+  background-color: white;
+}
+
+.friendHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.left-friendHeader > p {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.right-friendHeader > p {
+  color: blue;
+}
+
+.firstRow,
+.secondRow,
+.thirdRow {
+  display: flex;
+  padding-left: 15px;
+}
+
 .rightContainer {
   width: 600px;
-  margin-left: 15px;
+  /* margin-left: 10px; */
   position: static;
   top: -40px;
 }
@@ -116,13 +144,86 @@
   border-radius: 10px;
   position: relative;
   top: 30px;
+  background-color: white;
+}
+
+.postViewContainer {
+  width: 87%;
+  padding: 10px;
+  box-shadow: 0px 1px 2px 0px;
+  border-radius: 10px;
+  position: relative;
+  top: 30px;
+  background-color: white;
+}
+
+.postViewHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 10px;
+}
+
+.postViewRight {
+  display: flex;
+  justify-content: space-around;
+}
+
+.postFilter {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-right: 5px;
+  border-radius: 5px;
+  padding: 4px 6px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 13px;
+}
+
+.managePost {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 4px 6px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 13px;
+}
+
+.postViewMethod {
+  display: flex;
+  justify-content: space-around;
+}
+
+.listView {
+  display: flex;
+  align-items: center;
+  color: blue;
+  font-size: 15px;
+  width: 20%;
+  padding: 0 10px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.gridView {
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+  width: 20%;
+  padding: 0 10px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.gridView:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .newPost > img {
   width: 50px;
   border-radius: 50%;
   margin-right: 10px;
-  /* align-items: center; */
 }
 
 .newPost > input {
@@ -131,7 +232,6 @@
   border-radius: 20px;
   width: 80%;
   background-color: rgba(0, 0, 0, 0.1);
-  /* align-items: center; */
 }
 .newPost {
   display: flex;
@@ -150,6 +250,11 @@
   margin: 10px;
 }
 
+.uploadOption > h5 {
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 5px;
+}
+
 .liveIcon > .MuiSvgIcon-root {
   color: red;
 }
@@ -162,7 +267,7 @@
   color: rgba(30, 128, 240, 0.753);
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 915px) {
   .intro {
     width: 284px;
   }
@@ -176,5 +281,28 @@
     height: 80px;
     margin: 2px;
     cursor: pointer;
+  }
+
+  .friendContainer {
+    width: 285px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rightContainer {
+    position: absolute;
+    top: 1725px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+  }
+
+  .friendContainer {
+    top: 1360px;
   }
 }

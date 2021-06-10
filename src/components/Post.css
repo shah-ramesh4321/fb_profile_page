@@ -34,25 +34,44 @@
 .postContainer {
   border-radius: 10px;
   box-shadow: 0px 1px 2px 0px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   position: relative;
-  top: 50px;
+  top: 40px;
   width: 90%;
+  background-color: white;
 }
 
-.like-comment{
+.like-comment {
   display: flex;
   justify-content: space-between;
   margin: 5px 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.reactSection{
+.reactSection {
   display: flex;
   justify-content: space-around;
 }
 
-.reactOption{
+.reactOption {
   display: flex;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.likeBtn {
+  filter: invert(50%);
+}
+
+.shareBtn {
+  transform: scaleX(-1);
+  filter: invert(50%);
+}
+.commentBtn {
+  filter: invert(50%);
+}
+.reactOption > h5 {
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 5px;
 }

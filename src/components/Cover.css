@@ -4,7 +4,7 @@
   border-radius: 10px;
   align-items: center;
   height: 545px;
-  background-image: linear-gradient(180deg, rgba(128, 128, 128, 0.384), white);
+  background-image: linear-gradient(180deg, rgb(200, 185, 227), white);
   /* justify-content: space-around; */
   box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.4);
 }
@@ -14,6 +14,7 @@
   margin-right: auto;
   width: 60%;
   height: 350px;
+  border-radius: 5px;
 }
 .profileImg {
   display: block;
